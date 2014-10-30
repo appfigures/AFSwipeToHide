@@ -12,12 +12,6 @@ Works with iOS 5.0+
 
 ![AFSwipeToHide in action](AFSwipeToHide.gif)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 AFSwipeToHide is available through [CocoaPods](http://cocoapods.org). To install
