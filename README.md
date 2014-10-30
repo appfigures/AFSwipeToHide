@@ -4,6 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/AFSwipeToHide.svg?style=flat)](http://cocoadocs.org/docsets/AFSwipeToHide)
 [![Platform](https://img.shields.io/cocoapods/p/AFSwipeToHide.svg?style=flat)](http://cocoadocs.org/docsets/AFSwipeToHide)
 
+![AFSwipeToHide in action](AFSwipeToHide.gif)
+
+A simple utility class to help achieve Safari's swipe-to-hide effect.
+The class can be used as a UIScrollViewDelegate or on its own. Check out
+the [example project](https://github.com/appfigures/AFSwipeToHide/blob/master/Example/AFSwipeToHide/ViewController.m) for simple usage.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
