@@ -20,11 +20,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AppDelegate.h"
+@interface ViewController : UIViewController
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+@end
+

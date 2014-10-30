@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/appFigures/AFSwipeToHide"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Oz" => "opensource@appfigures.com" }
+  s.author           = { "Oz" => "oz" }
   s.source           = { :git => "https://github.com/appFigures/AFSwipeToHide.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/appFigures'
 

@@ -1,0 +1,14 @@
+PODS:
+  - AFSwipeToHide (0.1.0)
+
+DEPENDENCIES:
+  - AFSwipeToHide (from `../`)
+
+EXTERNAL SOURCES:
+  AFSwipeToHide:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFSwipeToHide: 5a9c58bae1174a15ef8788284c6630bb4c0bc56b
+
+COCOAPODS: 0.34.2
