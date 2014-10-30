@@ -8,6 +8,8 @@ A simple utility class to help achieve Safari's swipe-to-hide effect.
 The class can be used as a `UIScrollViewDelegate` or on its own. Check out
 the [example project](https://github.com/appfigures/AFSwipeToHide/blob/master/Example/AFSwipeToHide/ViewController.m) for simple usage.
 
+Works with iOS 5.0+
+
 ![AFSwipeToHide in action](AFSwipeToHide.gif)
 
 ## Usage
