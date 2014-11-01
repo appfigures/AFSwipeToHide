@@ -21,7 +21,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Oz from appFigures
+[@oztune](http://twitter.com/oztune) from [@appFigures](http://twitter.com/appFigures)
 
 ## License
 
