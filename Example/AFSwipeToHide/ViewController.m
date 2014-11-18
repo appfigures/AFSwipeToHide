@@ -20,6 +20,7 @@
 
 #import "ViewController.h"
 #import <AFSwipeToHide/AFSwipeToHide.h>
+#import "ControllerNameItem.h"
 
 @interface ViewController ()<UITableViewDataSource, AFSwipeToHideDelegate>
 {
@@ -37,8 +38,32 @@
 
 @implementation ViewController
 
+#pragma mark - Action
+
+- (IBAction)af_popToViewController:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma nark - Life Cycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!self.item.hasNavigationBar) {
+        self.navigationController.navigationBarHidden = YES;
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.item.hasNavigationBar) {
+        self.navigationController.navigationBarHidden = NO;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     _headerHeight = self.titleHeight.constant;
     
@@ -56,6 +81,8 @@
     self.tableView.delegate = (id<UITableViewDelegate>)_swipeToHide;
     
     [self updateElements];
+    
+    
 }
 
 - (void)updateElements {
@@ -70,7 +97,7 @@
 #pragma mark - Sizing utils
 
 - (CGFloat)statusBarHeight {
-    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+    return (self.item.hasNavigationBar ? 0 : [[UIApplication sharedApplication] statusBarFrame].size.height);
 }
 
 #pragma mark - AFUSwipeToHide delegate
@@ -79,7 +106,7 @@
     [self updateElements];
     
     if (!interactive) {
-        [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.45 initialSpringVelocity:0.0 options:0 animations:^{
+        [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.65 initialSpringVelocity:0.0 options:0 animations:^{
             [self.view setNeedsLayout];
             [self.view layoutIfNeeded];
         } completion:nil];

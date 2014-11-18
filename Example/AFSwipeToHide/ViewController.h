@@ -20,7 +20,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ControllerNameItem;
+
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) ControllerNameItem *item;
 
 @end
 

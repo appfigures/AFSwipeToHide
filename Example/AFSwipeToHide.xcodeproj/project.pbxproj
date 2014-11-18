@@ -21,6 +21,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		7DDF9C801A1B1B2E00FF236C /* AFRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF9C7F1A1B1B2E00FF236C /* AFRootTableViewController.m */; };
+		7DDF9C831A1B1DA600FF236C /* ControllerNameItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF9C821A1B1DA600FF236C /* ControllerNameItem.m */; };
 		A3793E1B418B251CF9E9D323 /* libPods-AFSwipeToHide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC87DD27DA7BB70B8EEEF35 /* libPods-AFSwipeToHide.a */; };
 		DA8EB0F30EA401214E37EBE7 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330B05E7436C539DC56B70F8 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,10 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		7DDF9C7E1A1B1B2E00FF236C /* AFRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRootTableViewController.h; sourceTree = "<group>"; };
+		7DDF9C7F1A1B1B2E00FF236C /* AFRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRootTableViewController.m; sourceTree = "<group>"; };
+		7DDF9C811A1B1DA600FF236C /* ControllerNameItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerNameItem.h; sourceTree = "<group>"; };
+		7DDF9C821A1B1DA600FF236C /* ControllerNameItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerNameItem.m; sourceTree = "<group>"; };
 		8F62D1C4AC0681D0E23FE8A1 /* Pods-AFSwipeToHide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSwipeToHide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFSwipeToHide/Pods-AFSwipeToHide.debug.xcconfig"; sourceTree = "<group>"; };
 		E42E6FCAC9046D95FBFC5D69 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB807404A9E3A47C20E6D937 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -132,8 +138,8 @@
 			children = (
 				2D15B2971A02CE6000DE511E /* AppDelegate.h */,
 				2D15B2981A02CE6000DE511E /* AppDelegate.m */,
-				2D15B2991A02CE6000DE511E /* ViewController.h */,
-				2D15B29A1A02CE6000DE511E /* ViewController.m */,
+				7DDF9C841A1B1E1800FF236C /* UIModel */,
+				7DDF9C851A1B1E2200FF236C /* Controllers */,
 				2D15B29D1A02CEA600DE511E /* Main.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -190,6 +196,26 @@
 				3532E44D1DB55353DFB20A65 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DDF9C841A1B1E1800FF236C /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DDF9C811A1B1DA600FF236C /* ControllerNameItem.h */,
+				7DDF9C821A1B1DA600FF236C /* ControllerNameItem.m */,
+			);
+			name = UIModel;
+			sourceTree = "<group>";
+		};
+		7DDF9C851A1B1E2200FF236C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DDF9C7E1A1B1B2E00FF236C /* AFRootTableViewController.h */,
+				7DDF9C7F1A1B1B2E00FF236C /* AFRootTableViewController.m */,
+				2D15B2991A02CE6000DE511E /* ViewController.h */,
+				2D15B29A1A02CE6000DE511E /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,9 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DDF9C801A1B1B2E00FF236C /* AFRootTableViewController.m in Sources */,
 				2D15B29B1A02CE6000DE511E /* AppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				2D15B29C1A02CE6000DE511E /* ViewController.m in Sources */,
+				7DDF9C831A1B1DA600FF236C /* ControllerNameItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +510,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFSwipeToHide/AFSwipeToHide-Prefix.pch";
 				INFOPLIST_FILE = "AFSwipeToHide/AFSwipeToHide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -497,7 +525,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFSwipeToHide/AFSwipeToHide-Prefix.pch";
 				INFOPLIST_FILE = "AFSwipeToHide/AFSwipeToHide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
