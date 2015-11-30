@@ -5,7 +5,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/AFSwipeToHide.svg?style=flat)](http://cocoadocs.org/docsets/AFSwipeToHide)
 
 A simple utility class to help achieve Safari's swipe-to-hide effect.
-The class can be used as a `UIScrollViewDelegate` or on its own. Check out
+
+This class provides all the logic for creating the effect, but is completely decoupled from UI classes so it integrates cleanly with existing code. It can be easily used as a `UIScrollViewDelegate` or on its own. Check out
 the [example project](https://github.com/appfigures/AFSwipeToHide/blob/master/Example/AFSwipeToHide/ViewController.m) for simple usage.
 
 Works with iOS 5.0+
